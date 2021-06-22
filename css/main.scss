@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+}
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.container {
+  text-align: center;
+  width: 60%;
+  min-height: 100vh;
+  margin: auto;
+
+  .top-img {
+    position: absolute;
+    left: -10px;
+  }
+  .header {
+    h2 {
+      padding: 50px 10px 15px;
+      font-size: 1.7rem;
+      color: var(--Very-Dark-Magenta);
+    }
+    p {
+      color: var(--Dark-Grayish-Magenta);
+      line-height: 1.5;
+      padding: 15px 0;
+      font-size: 1rem;
+    }
+  }
+  .reviews {
+    .review {
+      background: var(--Light-Grayish-Magenta);
+      margin: 20px;
+      padding: 10px;
+      border-radius: 10px;
+
+      img {
+        padding-top: 5px;
+      }
+      h3 {
+        padding: 10px 0;
+        font-size: 0.85rem;
+        color: var(--Very-Dark-Magenta);
+      }
+    }
+  }
+
+  .cards {
+    margin: 45px 0;
+    .card {
+      background: var(--Very-Dark-Magenta);
+      margin: 15px;
+      padding: 30px;
+      color: var(--White);
+      border-radius: 10px;
+      .user {
+        display: flex;
+        img {
+          border-radius: 50%;
+          width: 50px;
+          margin: 10px;
+        }
+        .name {
+          margin: 15px 0 5px 10px;
+          h3 {
+            margin-bottom: 5px;
+          }
+          p {
+            color: var(--Soft-Pink);
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+    p {
+      text-align: left;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      color: var(--Light-Grayish-Magenta);
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    .top-img {
+      position: absolute;
+      top: -10px;
+      width: 800px;
+    }
+    .top {
+      display: flex;
+      margin-top: 150px;
+      justify-content: space-between;
+      .header {
+        width: 50%;
+        text-align: left;
+        h2 {
+          font-size: 3rem;
+          padding: 0;
+        }
+        p {
+          font-size: 0.95rem;
+        }
+      }
+      .review {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        h3 {
+          font-size: 0.8rem;
+          margin-right: 50px;
+        }
+      }
+      .second-review {
+        position: relative;
+        left: 40px;
+      }
+      .third-review {
+        position: relative;
+        left: 80px;
+      }
+    }
+    .cards {
+      display: flex;
+      .second-card {
+        position: relative;
+        top: 20px;
+      }
+      .third-card {
+        position: relative;
+        top: 40px;
+      }
+      .text {
+        font-size: 0.75rem;
+        margin-top: 20px;
+      }
+    }
+  }
+}
